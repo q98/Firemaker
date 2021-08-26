@@ -42,14 +42,12 @@ public class Firemaking extends AbstractScript {
         new ScriptUploader().uploadAndStart("FireMaking", "N/A", "127.0.0.1", false, false);
     }
 
-    public Tile Start2;
-   // public static Tile[] StartTile = {};
+
     List<Tile> StartTile = new ArrayList<Tile>();
 
     @Override
     public void onStart() {
         logType = getOption("Log");
-        //renderEvent();
     }
 
 
@@ -58,17 +56,17 @@ public class Firemaking extends AbstractScript {
         int index = randomGenerator.nextInt(StartTile.size());
         return StartTile.get(index);
     }
-    @Subscribe
-    public void renderEvent(RenderEvent event) {
-        Graphics g = event.getGraphics();
-        g.fillRect(10, 10, 400, 300);
-        g.drawRect(10, 10, 400, 300);
-        g.setColor(rgb(255,0,0));
-        g.setTextSize(22);
-        g.drawString("Burner", 15, 77);
-        g.drawString("Logs: " + logType, 15, 120);
-        g.drawString("Running for: " + ScriptManager.INSTANCE.getRuntime(true), 15, 170);
-    }
+    //@Subscribe
+    //public void renderEvent(RenderEvent event) {
+    //    Graphics g = event.getGraphics();
+    //    g.fillRect(10, 10, 400, 300);
+    //    g.drawRect(10, 10, 400, 300);
+    //     g.setColor(rgb(255,0,0));
+    //    g.setTextSize(22);
+    //    g.drawString("Burner", 15, 77);
+    //    g.drawString("Logs: " + logType, 15, 120);
+    //    g.drawString("Running for: " + ScriptManager.INSTANCE.getRuntime(true), 15, 170);
+    //}
     @Override
     public void poll() {
 
