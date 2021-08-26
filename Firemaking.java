@@ -25,7 +25,7 @@ import java.util.*;
 import static org.powbot.api.Color.rgb;
 
 
-@ScriptManifest(name= "FireMaking", description="Makes fire..", version = "1.0.0")
+@ScriptManifest(name= "FireMaking", description="Burns any log in the Grandexchange" version = "1.0.0")
 @ScriptConfiguration(
         name = "Log",
         description = "Pick which logs you'd like to burn.",
